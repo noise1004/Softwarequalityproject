@@ -119,11 +119,11 @@ async def main():
 
             print('-----------------------------')
 
-with open("policy.json", "r") as dittoFile:
-    data = json.load(dittoFile)
+#with open("policy.json", "r") as dittoFile:
+#    data = json.load(dittoFile)
 
-response = put_policy("org.ovin:my-policy",data)
-print(response)
+#response = put_policy("org.ovin:my-policy",data)
+#print(response)
 
 #STEP 2
 #with open("VSS_Ditto.json", "r") as dittoFile:
@@ -134,4 +134,4 @@ print(response)
 
 
 # Run the asynchronous main function
-#asyncio.run(main())
+asyncio.run(main())
