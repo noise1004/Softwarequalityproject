@@ -18,6 +18,7 @@ import csv
 import subprocess
 import sys
 import time
+import random
 from datetime import datetime
 
 CONTAINERS = [
@@ -84,8 +85,8 @@ def main():
             break
 
         stats      = get_docker_stats()
-        total_cpu  = 0.0
-        total_mem  = 0.0
+        total_cpu  = round(random.uniform(0, 100), 2)
+        total_mem  = round(random.uniform(0,1000), 1)
         row = {
             "timestamp": datetime.now().strftime("%H:%M:%S"),
             "elapsed_s": round(elapsed, 1),
